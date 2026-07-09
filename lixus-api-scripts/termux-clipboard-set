@@ -1,0 +1,4 @@
+#!/data/data/com.lixus.terminal/files/usr/bin/bash
+# Usage: echo "text" | termux-clipboard-set
+text="$(cat)"
+am broadcast -a "com.lixus.terminal.api.CLIPBOARD_SET" --es text "$text" > /dev/null
