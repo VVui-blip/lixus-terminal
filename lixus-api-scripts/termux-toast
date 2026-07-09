@@ -1,0 +1,11 @@
+#!/data/data/com.lixus.terminal/files/usr/bin/bash
+# Usage: termux-toast [-s] "message text"
+long="true"
+while getopts "s" opt; do
+  case "$opt" in
+    s) long="false" ;;
+  esac
+done
+shift $((OPTIND - 1))
+text="$*"
+am broadcast -a "com.lixus.terminal.api.TOAST" --es text "$text" --ez long "$long" > /dev/null
