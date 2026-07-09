@@ -1,0 +1,9 @@
+#!/data/data/com.lixus.terminal/files/usr/bin/bash
+# Usage: termux-vibrate [-d duration_ms]
+duration=300
+while getopts "d:" opt; do
+  case "$opt" in
+    d) duration="$OPTARG" ;;
+  esac
+done
+am broadcast -a "com.lixus.terminal.api.VIBRATE" --ei duration_ms "$duration" > /dev/null
