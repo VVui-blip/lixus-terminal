@@ -1,0 +1,11 @@
+#!/data/data/com.lixus.terminal/files/usr/bin/bash
+# Usage: termux-notification -t "Title" -c "content text"
+title="Lixus Terminal"
+content=""
+while getopts "t:c:" opt; do
+  case "$opt" in
+    t) title="$OPTARG" ;;
+    c) content="$OPTARG" ;;
+  esac
+done
+am broadcast -a "com.lixus.terminal.api.NOTIFICATION" --es title "$title" --es content "$content" > /dev/null
