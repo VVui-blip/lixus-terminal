@@ -1,0 +1,4 @@
+#!/data/data/com.lixus.terminal/files/usr/bin/bash
+# Usage: termux-torch on|off
+[ "$1" = "on" ] && val=true || val=false
+am broadcast -a "com.lixus.terminal.api.TORCH" --ez enabled "$val" > /dev/null
