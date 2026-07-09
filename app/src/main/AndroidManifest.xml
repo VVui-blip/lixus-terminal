@@ -19,7 +19,15 @@
         android:label="@string/permission_run_command_label"
         android:protectionLevel="dangerous" />
 
+    <permission
+        android:name="${TERMUX_PACKAGE_NAME}.permission.LIXUS_API"
+        android:description="@string/permission_run_command_description"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Lixus Terminal API"
+        android:protectionLevel="dangerous" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -103,7 +111,7 @@
             android:theme="@style/Theme.TermuxApp.DayNight.NoActionBar" />
 
         <activity
-            android:name=".shared.activities.ReportActivity"
+            android:name="com.termux.shared.activities.ReportActivity"
             android:theme="@style/Theme.MarkdownViewActivity.DayNight"
             android:documentLaunchMode="intoExisting" />
 
@@ -189,7 +197,7 @@
         </receiver>
 
         <receiver
-            android:name=".shared.activities.ReportActivity$ReportActivityBroadcastReceiver"
+            android:name="com.termux.shared.activities.ReportActivity$ReportActivityBroadcastReceiver"
             android:exported="false" />
 
 
@@ -205,6 +213,22 @@
                 <action android:name="${TERMUX_PACKAGE_NAME}.RUN_COMMAND" />
             </intent-filter>
         </service>
+
+        <!-- Lixus API: built-in termux:api-style broadcast receiver, no separate plugin app needed -->
+        <receiver
+            android:name=".app.api.LixusApiReceiver"
+            android:exported="true"
+            android:permission="${TERMUX_PACKAGE_NAME}.permission.LIXUS_API">
+            <intent-filter>
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.VIBRATE" />
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.TOAST" />
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.TORCH" />
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.CLIPBOARD_GET" />
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.CLIPBOARD_SET" />
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.BATTERY_STATUS" />
+                <action android:name="${TERMUX_PACKAGE_NAME}.api.NOTIFICATION" />
+            </intent-filter>
+        </receiver>
 
 
         <!-- This (or rather, value 2.1 or higher) is needed to make the Samsung Galaxy S8 mark the
