@@ -12,7 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.lixus.terminal.R;
 import com.lixus.terminal.app.TermuxActivity;
 import com.termux.shared.termux.extrakeys.ExtraKeysView;
-import com.lixus.terminal.terminal.TerminalSession;
+import com.termux.terminal.TerminalSession;
 
 public class TerminalToolbarViewPager {
 
