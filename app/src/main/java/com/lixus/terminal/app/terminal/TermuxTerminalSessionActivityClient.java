@@ -27,10 +27,10 @@ import com.lixus.terminal.app.TermuxService;
 import com.termux.shared.termux.settings.properties.TermuxPropertyConstants;
 import com.termux.shared.termux.terminal.io.BellHandler;
 import com.termux.shared.logger.Logger;
-import com.lixus.terminal.terminal.TerminalColors;
-import com.lixus.terminal.terminal.TerminalSession;
-import com.lixus.terminal.terminal.TerminalSessionClient;
-import com.lixus.terminal.terminal.TextStyle;
+import com.termux.terminal.TerminalColors;
+import com.termux.terminal.TerminalSession;
+import com.termux.terminal.TerminalSessionClient;
+import com.termux.terminal.TextStyle;
 
 import java.io.File;
 import java.io.FileInputStream;
