@@ -23,7 +23,7 @@ import com.lixus.terminal.app.TermuxActivity;
 import com.termux.shared.termux.shell.command.runner.terminal.TermuxSession;
 import com.termux.shared.theme.NightMode;
 import com.termux.shared.theme.ThemeUtils;
-import com.lixus.terminal.terminal.TerminalSession;
+import com.termux.terminal.TerminalSession;
 
 import java.util.List;
 
