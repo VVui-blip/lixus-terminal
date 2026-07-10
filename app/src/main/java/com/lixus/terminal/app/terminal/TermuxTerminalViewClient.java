@@ -40,9 +40,9 @@ import com.termux.shared.termux.TermuxUtils;
 import com.termux.shared.termux.data.TermuxUrlUtils;
 import com.termux.shared.view.KeyboardUtils;
 import com.termux.shared.view.ViewUtils;
-import com.lixus.terminal.terminal.KeyHandler;
-import com.lixus.terminal.terminal.TerminalEmulator;
-import com.lixus.terminal.terminal.TerminalSession;
+import com.termux.terminal.KeyHandler;
+import com.termux.terminal.TerminalEmulator;
+import com.termux.terminal.TerminalSession;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -152,7 +152,7 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
     }
 
     /**
-     * Should be called when {@link com.lixus.terminal.view.TerminalView#mEmulator} is set
+     * Should be called when {@link com.termux.view.TerminalView#mEmulator} is set
      */
     @Override
     public void onEmulatorSet() {
