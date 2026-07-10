@@ -54,10 +54,10 @@ import com.termux.shared.termux.settings.properties.TermuxAppSharedProperties;
 import com.termux.shared.termux.theme.TermuxThemeUtils;
 import com.termux.shared.theme.NightMode;
 import com.termux.shared.view.ViewUtils;
-import com.lixus.terminal.terminal.TerminalSession;
-import com.lixus.terminal.terminal.TerminalSessionClient;
-import com.lixus.terminal.view.TerminalView;
-import com.lixus.terminal.view.TerminalViewClient;
+import com.termux.terminal.TerminalSession;
+import com.termux.terminal.TerminalSessionClient;
+import com.termux.view.TerminalView;
+import com.termux.view.TerminalViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
