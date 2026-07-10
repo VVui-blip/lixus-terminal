@@ -45,9 +45,9 @@ import com.termux.shared.data.DataUtils;
 import com.termux.shared.shell.command.ExecutionCommand;
 import com.termux.shared.shell.command.ExecutionCommand.Runner;
 import com.termux.shared.shell.command.ExecutionCommand.ShellCreateMode;
-import com.lixus.terminal.terminal.TerminalEmulator;
-import com.lixus.terminal.terminal.TerminalSession;
-import com.lixus.terminal.terminal.TerminalSessionClient;
+import com.termux.terminal.TerminalEmulator;
+import com.termux.terminal.TerminalSession;
+import com.termux.terminal.TerminalSessionClient;
 
 import java.util.ArrayList;
 import java.util.List;
