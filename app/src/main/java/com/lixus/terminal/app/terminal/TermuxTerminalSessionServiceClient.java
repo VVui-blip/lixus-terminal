@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import com.lixus.terminal.app.TermuxService;
 import com.termux.shared.termux.shell.command.runner.terminal.TermuxSession;
 import com.termux.shared.termux.terminal.TermuxTerminalSessionClientBase;
-import com.lixus.terminal.terminal.TerminalSession;
-import com.lixus.terminal.terminal.TerminalSessionClient;
+import com.termux.terminal.TerminalSession;
+import com.termux.terminal.TerminalSessionClient;
 
 /** The {@link TerminalSessionClient} implementation that may require a {@link Service} for its interface methods. */
 public class TermuxTerminalSessionServiceClient extends TermuxTerminalSessionClientBase {
