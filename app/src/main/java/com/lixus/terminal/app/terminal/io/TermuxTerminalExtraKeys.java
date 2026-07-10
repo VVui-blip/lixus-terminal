@@ -16,7 +16,7 @@ import com.termux.shared.termux.extrakeys.ExtraKeysInfo;
 import com.termux.shared.termux.settings.properties.TermuxPropertyConstants;
 import com.termux.shared.termux.settings.properties.TermuxSharedProperties;
 import com.termux.shared.termux.terminal.io.TerminalExtraKeys;
-import com.lixus.terminal.view.TerminalView;
+import com.termux.view.TerminalView;
 
 import org.json.JSONException;
 
